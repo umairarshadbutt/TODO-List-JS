@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/umairarshadbutt/TODO-List-JS/issues"
   },
-  "homepage": "https://github.com/umairarshadbutt/TODO-List-JS#readme"
+  "homepage": "https://github.com/umairarshadbutt/TODO-List-JS#readme",
+  "devDependencies": {
+    "webpack-cli": "^4.5.0"
+  }
 }
