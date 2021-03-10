@@ -19,5 +19,8 @@
   "homepage": "https://github.com/umairarshadbutt/TODO-List-JS#readme",
   "devDependencies": {
     "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
