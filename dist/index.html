@@ -14,11 +14,11 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-    <title>Library project</title>
+    <title>TODO List</title>
   </head>
   <body>
     <main class="flex-column">
-      <div class="content booksColumn"></div>
+      <div class="content tasksColumn"></div>
 
       <div>
         <!-- Button trigger modal -->
@@ -58,39 +58,39 @@
               <div class="modal-body">
                 <form class="form">
                   <div class="form-group">
-                    <label for="bookName">Title: </label>
+                    <label for="taskTitle">Title: </label>
                     <input
                       type="text"
                       class="form-control"
-                      id="bookName"
+                      id="taskTitle"
                       placeholder="Morning Walk"
                     />
                   </div>
 
                   <div class="form-group">
-                    <label for="bookDescription">Description: </label>
+                    <label for="taskDescription">Description: </label>
                     <input
                       type="text"
                       class="form-control"
-                      id="bookDescription"
-                      placeholder="Complete the research of Imam Farahi"
+                      id="taskDescription"
+                      placeholder="Add task Description"
                     />
                   </div>
                   <div class="form-group">
-                    <label for="authorName">Priority: </label>
+                    <label for="taskPriority">Priority: </label>
                     <input
                       type="text"
                       class="form-control"
-                      id="authorName"
-                      placeholder="Javed Ghamidi"
+                      id="taskPriority"
+                      placeholder="..."
                     />
                   </div>
                   <div class="form-group">
-                    <label for="bookPages">Cetagory: </label>
+                    <label for="taskCatagory">Cetagory: </label>
                     <input
                       type="number"
                       class="form-control"
-                      id="bookPages"
+                      id="taskCatagory"
                       placeholder="680"
                     />
                   </div>
@@ -98,11 +98,11 @@
                     <input
                       type="checkbox"
                       class="form-check-input"
-                      id="read"
+                      id="status"
                       checked
                     />
                   </div>
-                  <button class="btn btn-primary saveBook">Save</button>
+                  <button class="btn btn-primary saveTask">Save</button>
                 </form>
               </div>
             </div>
