@@ -81,19 +81,21 @@ function listTask() {
   const content = document.querySelector('.content');
 
   content.innerHTML = '';
-
-  for (let i = 0; i < myTask.length; i += 1) {
-    createCard(myTask[i]);
+  var localStorageTask = JSON.parse(localStorage.getItem("task"));
+  for (let i = 0; i < localStorageTask.length; i += 1) {
+    createCard(localStorageTask[i]);
   }
 }
 
 function addTaskTomyTask(task) {
   myTask.push(task);
   localStorage.setItem("task", JSON.stringify(myTask));
+  
   listTask();
   last += 1;
 }
-
+// const myArrayFromLocalStorage = localStorage.getItem('task');
+//   console.log(myArrayFromLocalStorage);
 function clearInputs() {
   const formInputs = document.querySelectorAll('input');
   formInputs.forEach(
