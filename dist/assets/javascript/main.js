@@ -89,6 +89,7 @@ function listTask() {
 
 function addTaskTomyTask(task) {
   myTask.push(task);
+  localStorage.setItem("task", JSON.stringify(myTask));
   listTask();
   last += 1;
 }
