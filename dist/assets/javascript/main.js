@@ -1,13 +1,14 @@
 const myTask = [];
 let last = 0;
 
-function Task(title, priority, cetagory, description, status) {
+function Task(title, priority, cetagory, description, status, date) {
   this.id = last;
   this.title = title;
   this.priority = priority;
   this.cetagory = cetagory;
   this.description = description;
   this.status = status;
+  this.date = date;
 }
 
 function deleteTask(event) {
@@ -47,11 +48,13 @@ function createCard(task) {
   cardTitle.innerText = task.title;
   const p = document.createElement('p');
   p.setAttribute('class', 'card-text');
-  p.innerText = task.priority;
+  p.innerText = "Priority: "+task.priority;
   const description = document.createElement('p');
   description.setAttribute('class', 'card-text');
-  description.innerText = task.description;
-
+  description.innerText = "Description: "+task.description;
+  const date = document.createElement('p');
+  date.setAttribute('class', 'card-text');
+  date.innerText = "Date: "+task.date;
   const statusButton = document.createElement('button');
   statusButton.setAttribute('class', 'btn btn-primary');
   statusButton.setAttribute('status-id', task.id);
@@ -72,8 +75,9 @@ function createCard(task) {
   card.setAttribute('data-id', task.id);
   cardBody.appendChild(cardTitle);
   card.appendChild(cardBody);
-  card.appendChild(p);
+  card.appendChild(date);
   card.appendChild(description);
+  card.appendChild(p);
   card.appendChild(statusButton);
   content.appendChild(card);
 
@@ -115,8 +119,9 @@ function saveNewTask(event) {
   const cetagory = document.getElementById('taskCatagory').value;
   const description = document.getElementById('taskDescription').value;
   const status = document.getElementById('status').checked;
+  const date = document.getElementById('taskDate').value;
 
-  const task = new Task(title, priority, cetagory, description, status);
+  const task = new Task(title, priority, cetagory, description, status, date);
   addTaskTomyTask(task);
 
   const modalBackdrop = document.querySelector('.modal-backdrop.show ');
