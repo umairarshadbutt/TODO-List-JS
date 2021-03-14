@@ -18,6 +18,12 @@
   },
   "homepage": "https://github.com/umairarshadbutt/TODO-List-JS#readme",
   "devDependencies": {
+    "eslint": "6.8.x",
+    "eslint-config-airbnb-base": "14.1.x",
+    "eslint-plugin-import": "2.20.x",
+    "stylelint": "13.3.x",
+    "stylelint-config-standard": "20.0.x",
+    "stylelint-scss": "3.17.x",
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
