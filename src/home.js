@@ -1,5 +1,7 @@
 const myTask = [];
 let last = 0;
+const localStorageTask1 = JSON.parse(localStorage.getItem('task'));
+const localStorageTask = JSON.parse(localStorage.getItem('task'));
 
 function Task(title, priority, cetagory, description, status, date) {
   this.id = last;
@@ -15,9 +17,8 @@ function deleteTask(event) {
   const id = event.target.getAttribute('delete-id');
   const data = `div[data-id="${id}"]`;
   myTask.splice(myTask.pop(), id);
-  var localStorageTask1 = JSON.parse(localStorage.getItem("task"));
   localStorageTask1.splice(localStorageTask1.pop(), id);
-  localStorage.setItem("task", JSON.stringify(localStorageTask1));
+  localStorage.setItem('task', JSON.stringify(localStorageTask1));
   const task = document.querySelector(data);
   task.remove();
 }
@@ -48,13 +49,10 @@ function createCard(task) {
   cardTitle.innerText = task.title;
   const p = document.createElement('p');
   p.setAttribute('class', 'card-text');
-  p.innerText = "Priority: "+task.priority;
   const description = document.createElement('p');
   description.setAttribute('class', 'card-text');
-  description.innerText = "Description: "+task.description;
   const date = document.createElement('p');
   date.setAttribute('class', 'card-text');
-  date.innerText = "Date: "+task.date;
   const statusButton = document.createElement('button');
   statusButton.setAttribute('class', 'btn btn-primary');
   statusButton.setAttribute('status-id', task.id);
@@ -88,7 +86,6 @@ function listTask() {
   const content = document.querySelector('.content');
 
   content.innerHTML = '';
-  var localStorageTask = JSON.parse(localStorage.getItem("task"));
   for (let i = 0; i < localStorageTask.length; i += 1) {
     createCard(localStorageTask[i]);
   }
@@ -96,8 +93,7 @@ function listTask() {
 
 function addTaskTomyTask(task) {
   myTask.push(task);
-  localStorage.setItem("task", JSON.stringify(myTask));
-  
+  localStorage.setItem('task', JSON.stringify(myTask));
   listTask();
   last += 1;
 }
