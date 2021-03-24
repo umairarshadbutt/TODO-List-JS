@@ -97,9 +97,10 @@ function listTask() {
 function addTaskTomyTask(task) {
   myTask.push(task);
   localStorage.setItem("task", JSON.stringify(myTask));
-  
+  return 1;
   listTask();
   last += 1;
+  
 }
 // const myArrayFromLocalStorage = localStorage.getItem('task');
 //   console.log(myArrayFromLocalStorage);
@@ -132,5 +133,4 @@ function saveNewTask(event) {
   clearInputs();
 }
 
-const saveTask = document.querySelector('.saveTask');
-saveTask.addEventListener('click', saveNewTask);
+module.exports = addTaskTomyTask;
