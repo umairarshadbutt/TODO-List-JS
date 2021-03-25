@@ -11,9 +11,24 @@ describe('MODULE UPDATE TASK', () => {
 
   describe('Testing html elements', () => {
     it('Getting the Model ID', () => {
-      const modalTitle = document.getElementById('exampleModalCenter');
-      expect(modalTitle).not.toBeNull();
+      const modelID = document.getElementById('exampleModalCenter');
+      expect(modelID).not.toBeNull();
     });
-   
+    it('Task Title', () => {
+      const taskTitle = document.getElementById('taskTitle');
+      expect(taskTitle).not.toBeNull();
+    });
+    it('Task Description', () => {
+      const taskDescription = document.getElementById('taskDescription');
+      expect(taskDescription).not.toBeNull();
+    });
+    it('Task Date', () => {
+      const taskDate = document.getElementById('taskDate');
+      expect(taskDate).not.toBeNull();
+    });
+    it('Task Priority', () => {
+      const taskPriority = document.getElementById('taskPriority');
+      expect(taskPriority).not.toBeNull();
+    });
   });
 });
