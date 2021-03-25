@@ -6,11 +6,9 @@
 [![Github Issues](https://img.shields.io/badge/GitHub-Issues-orange)](https://github.com/umairarshadbutt/TODO-List-JS/issues)
 [![GitHub2 Pull Requests](https://img.shields.io/badge/GitHub-Pull%20Requests-blue)](https://github.com/umairarshadbutt/TODO-List-JS/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
 </div>
 <p align="center">TODO List in JavaScript(and Webpack) is a practice project, which includes managing the dynamically DOM manipulation.I used Javascript, HTML5, CSS3, Bootsrap and Webpack to implement it</p>
-
-
-
 
 ## Live Link Demo
 
@@ -24,7 +22,6 @@
 - JavaScript
 - Webpack
 
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -32,7 +29,6 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 - Text Editor (VSCode is suggested.)
-
 
 ### Setup
 
@@ -44,7 +40,10 @@ To get a local copy up and running follow these simple example steps.
 - Use `npx webpack`
 - Run the `index.html` from `dist` directory
 
+### Testing
 
+- Run `yarn add --dev babel-jest @babel/core @babel/preset-env`
+- Run `yarn test` or `npm run test`
 
 To make any change,
 
@@ -58,7 +57,6 @@ To make any change,
 - Twitter: [@its_UmairArshad](https://twitter.com/its_UmairArshad)
 - Linkedin: [umair-arshad-butt](https://www.linkedin.com/in/umair-arshad-butt/)
 
-
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome! Start by:
@@ -71,7 +69,6 @@ Contributions, issues and feature requests are welcome! Start by:
 - Push your branch up to your forked repository
 - Open a Pull Request with a detailed description to the development branch of the original project for a review
 
-
 ## Show your support
 
 Give a ⭐️ if you like this project!
@@ -80,8 +77,6 @@ Give a ⭐️ if you like this project!
 
 - Project originally taken from The Odin Project
 - Project inspired by Microverse Program
-
-
 
 ## 📝 License
 
