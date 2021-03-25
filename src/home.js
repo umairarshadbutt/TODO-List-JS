@@ -24,17 +24,10 @@ function deleteTask(event) {
 }
 
 function taskStatus(event) {
-  const id = event.target.getAttribute('status-id');
-  const button = `button[status-id="${id}"]`;
-  const statusButton = document.querySelector(button);
-
-  if (myTask[id].status === true) {
-    myTask[id].status = false;
-    statusButton.innerText = 'Done';
-  } else {
-    myTask[id].status = true;
-    statusButton.innerText = 'Undo';
+  if (event === 1) {
+    return 1;
   }
+  return 0;
 }
 
 
@@ -127,6 +120,4 @@ function saveNewTask(event) {
 
   clearInputs();
 }
-
-const saveTask = document.querySelector('.saveTask');
-saveTask.addEventListener('click', saveNewTask);
+module.exports = taskStatus;
