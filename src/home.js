@@ -121,5 +121,13 @@ function saveNewTask(event) {
   clearInputs();
 }
 
-saveNewTask(1);
+function test(number) {
+  if (number === 0) {
+    saveNewTask(1);
+    return 1;
+  }
+  return 0;
+}
+
+test(1);
 module.exports = taskStatus;
