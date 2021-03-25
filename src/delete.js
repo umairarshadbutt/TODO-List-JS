@@ -9,5 +9,6 @@ const delete1 = (id) => {
   localStorage.setItem('task', JSON.stringify(localStorageTask1));
   const task = document.querySelector(data);
   task.remove();
+  return 0;
 };
 module.exports = delete1;

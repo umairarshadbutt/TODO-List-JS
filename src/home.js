@@ -120,4 +120,6 @@ function saveNewTask(event) {
 
   clearInputs();
 }
+
+saveNewTask(1);
 module.exports = taskStatus;
